@@ -1,0 +1,6 @@
+framework module Pods_Rodeo {
+  umbrella header "Pods-Rodeo-umbrella.h"
+
+  export *
+  module * { export * }
+}
