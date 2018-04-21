@@ -33,9 +33,25 @@ class MusicPlayerViewController: UIViewController {
                 self.ipv.progress = 50.0
                 self.ipv.stop()
                 self.player.stop()
-                self.player.removeItem(at: 0)
                 let item = AudioItem.init(highQualitySoundURL: nil, mediumQualitySoundURL: self.currentMusicItem?.songURL!, lowQualitySoundURL: nil)
                 self.player.play(item: item!)
+            }
+        }
+    }
+    
+    var playList: [Music]? = nil {
+        didSet {
+            if self.playList == nil {
+                return
+            }
+            for p in self.playList! {
+                if self.currentMusicItem == nil {
+                    self.currentMusicItem = p
+                    self.player.add(item: AudioItem(highQualitySoundURL: nil, mediumQualitySoundURL: p.songURL!, lowQualitySoundURL: nil)!)
+                }
+                else {
+                    self.player.add(item: AudioItem(highQualitySoundURL: nil, mediumQualitySoundURL: p.songURL!, lowQualitySoundURL: nil)!)
+                }
             }
         }
     }
@@ -51,24 +67,31 @@ class MusicPlayerViewController: UIViewController {
 
     @IBAction func playButtonTapped(_ sender: UIButton) {
         self.ipv.start()
+        self.player.play(item: self.player.currentItem!)
         self.playButton.isHidden = true
         self.pauseButton.isHidden = false
     }
     
     @IBAction func pauseButtonTapped(_ sender: UIButton) {
         self.ipv.stop()
+        self.player.pause()
         self.playButton.isHidden = false
         self.pauseButton.isHidden = true
     }
     
     @IBAction func nextTapped(sender: AnyObject) {
         self.ipv.restartWithProgress(duration: 50)
+        self.player.next()
     }
     
     @IBAction func previousTapped(sender: AnyObject) {
         self.ipv.restartWithProgress(duration: 10)
+        self.player.previous()
     }
     
+    @IBAction func btnDismiss(sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func makeItRounded(view : UIView!, newSize : CGFloat!){
         let saveCenter : CGPoint = view.center
@@ -106,5 +129,12 @@ extension MusicPlayerViewController: InteractivePlayerViewDelegate {
     func interactivePlayerViewDidStopPlaying(playerInteractive: InteractivePlayerView) {
         print("interactive player did stop")
     }
-   
 }
+
+extension MusicPlayerViewController: AudioPlayerDelegate {
+    
+    func audioPlayer(_ audioPlayer: AudioPlayer, willStartPlaying item: AudioItem) {
+    }
+    
+}
+

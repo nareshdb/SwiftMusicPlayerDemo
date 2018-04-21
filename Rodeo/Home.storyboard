@@ -401,6 +401,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="HomeNVC" id="ASR-fS-xE7" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="6gX-DV-uAk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -484,11 +485,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FxC-dk-Tec">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurbg" translatesAutoresizingMaskIntoConstraints="NO" id="yyI-18-G88">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0w-4N-KIi" customClass="InteractivePlayerView" customModule="Rodeo" customModuleProvider="target">
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="O0w-4N-KIi" customClass="InteractivePlayerView" customModule="Rodeo" customModuleProvider="target">
                                         <rect key="frame" x="88" y="134" width="200" height="200"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="2mM-TE-1Tr"/>
                                             <constraint firstAttribute="width" constant="200" id="jkM-DY-bhr"/>
@@ -497,7 +496,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="buttonSizes">
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="coverImage" value="imagetest"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="coverImage" value="musicplaceholder"/>
                                             <userDefinedRuntimeAttribute type="image" keyPath="actionOne_icon_selected" value="shuffle_selected"/>
                                             <userDefinedRuntimeAttribute type="image" keyPath="actionOne_icon_unselected" value="shuffle_unselected"/>
                                             <userDefinedRuntimeAttribute type="image" keyPath="actionTwo_icon_selected" value="like_selected"/>
@@ -566,12 +565,14 @@
                                                 <integer key="value" value="15"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnDismissWithSender:" destination="mJ9-fK-Bsn" eventType="touchUpInside" id="fiv-r2-ICc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="JUM-xS-lFo" firstAttribute="top" secondItem="ihZ-76-RFI" secondAttribute="bottom" id="44b-6U-9FR"/>
-                                    <constraint firstItem="yyI-18-G88" firstAttribute="leading" secondItem="FxC-dk-Tec" secondAttribute="leading" id="86f-lD-mAm"/>
                                     <constraint firstItem="ihZ-76-RFI" firstAttribute="leading" secondItem="FxC-dk-Tec" secondAttribute="leading" constant="40" id="CHk-KR-KCx"/>
                                     <constraint firstItem="Ao0-dk-ka4" firstAttribute="leading" secondItem="FxC-dk-Tec" secondAttribute="leading" constant="14" id="DgJ-Aa-kkZ"/>
                                     <constraint firstAttribute="trailing" secondItem="JUM-xS-lFo" secondAttribute="trailing" constant="40" id="DvY-qm-XWH"/>
@@ -581,14 +582,11 @@
                                     <constraint firstItem="lOU-Pa-0dP" firstAttribute="leading" secondItem="O0w-4N-KIi" secondAttribute="trailing" constant="20" id="T15-L9-sDO"/>
                                     <constraint firstAttribute="centerY" secondItem="mny-gs-7hX" secondAttribute="centerY" id="Uhu-Xt-mEz"/>
                                     <constraint firstItem="Ao0-dk-ka4" firstAttribute="top" secondItem="FxC-dk-Tec" secondAttribute="top" constant="25" id="ZkB-DD-yVG"/>
-                                    <constraint firstAttribute="bottom" secondItem="yyI-18-G88" secondAttribute="bottom" id="b2V-Hm-FlC"/>
                                     <constraint firstItem="JUM-xS-lFo" firstAttribute="leading" secondItem="FxC-dk-Tec" secondAttribute="leading" constant="40" id="g2e-Xw-HFB"/>
-                                    <constraint firstItem="yyI-18-G88" firstAttribute="top" secondItem="FxC-dk-Tec" secondAttribute="top" id="g9V-kJ-G8K"/>
                                     <constraint firstAttribute="centerY" secondItem="O0w-4N-KIi" secondAttribute="centerY" id="grM-Jx-pLQ"/>
                                     <constraint firstItem="JUM-xS-lFo" firstAttribute="top" secondItem="ihZ-76-RFI" secondAttribute="bottom" id="hrF-h6-91O"/>
                                     <constraint firstAttribute="trailing" secondItem="ihZ-76-RFI" secondAttribute="trailing" constant="40" id="kND-m7-nas"/>
                                     <constraint firstAttribute="centerY" secondItem="lOU-Pa-0dP" secondAttribute="centerY" id="m26-uX-td5"/>
-                                    <constraint firstAttribute="trailing" secondItem="yyI-18-G88" secondAttribute="trailing" id="sfo-7B-scn"/>
                                     <constraint firstAttribute="centerX" secondItem="O0w-4N-KIi" secondAttribute="centerX" id="u1Q-21-16A"/>
                                 </constraints>
                                 <variation key="default">
@@ -600,8 +598,28 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgh-dt-VEX">
                                 <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wcj-qd-Llw">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pJ2-fM-IaU">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pJ2-fM-IaU" id="uRj-vG-Mds">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wcj-qd-Llw" secondAttribute="bottom" id="Aij-rB-pDL"/>
                                     <constraint firstAttribute="height" constant="200" id="DzC-qe-nbq"/>
+                                    <constraint firstItem="wcj-qd-Llw" firstAttribute="top" secondItem="Sgh-dt-VEX" secondAttribute="top" id="Rq1-8F-PQh"/>
+                                    <constraint firstItem="wcj-qd-Llw" firstAttribute="leading" secondItem="Sgh-dt-VEX" secondAttribute="leading" id="YKH-b1-SEw"/>
+                                    <constraint firstAttribute="trailing" secondItem="wcj-qd-Llw" secondAttribute="trailing" id="xaw-yE-Hdr"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8la-7O-mkF">
@@ -655,7 +673,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blurBgImage" destination="yyI-18-G88" id="mjr-o1-OpA"/>
                         <outlet property="containerView" destination="Sgh-dt-VEX" id="bvl-6Q-ixf"/>
                         <outlet property="ipv" destination="O0w-4N-KIi" id="1KD-Gg-OTt"/>
                         <outlet property="pauseButton" destination="9cc-uR-HIV" id="Nxr-gX-vRB"/>
@@ -669,15 +686,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blurbg" width="1110" height="1094"/>
         <image name="ic_BuyGreyIcon" width="13" height="12"/>
         <image name="ic_HomeUnSelectedIcon" width="94" height="60"/>
         <image name="ic_SettingsWhiteIcon" width="16" height="16"/>
         <image name="icon_back" width="256" height="256"/>
         <image name="icon_forward" width="256" height="256"/>
-        <image name="imagetest" width="373" height="373"/>
         <image name="like_selected" width="64" height="64"/>
         <image name="like_unselected" width="64" height="64"/>
+        <image name="musicplaceholder" width="64" height="64"/>
         <image name="pause" width="64" height="64"/>
         <image name="play" width="64" height="64"/>
         <image name="replay_selected" width="64" height="64"/>

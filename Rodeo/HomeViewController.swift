@@ -46,11 +46,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.imgLabel.kf.indicatorType = .activity
         cell.imgLabel.kf.setImage(with: music.coverImage, placeholder: #imageLiteral(resourceName: "placeholder"), options: nil, progressBlock: nil, completionHandler: nil)
         cell.lblSongName.text = music.name
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         MusicPlayerViewController.sharedPlayer.currentMusicItem = self.songs[indexPath.row]
+        MusicPlayerViewController.sharedPlayer.playList = self.songs
     }
     
     @IBAction func musicTapped(_ sender: UIButton) {
