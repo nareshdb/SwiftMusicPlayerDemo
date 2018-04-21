@@ -9,9 +9,21 @@
 /* Begin PBXBuildFile section */
 		84179135208343D900B6114B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84179134208343D900B6114B /* AppDelegate.swift */; };
 		84179137208343D900B6114B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84179136208343D900B6114B /* ViewController.swift */; };
-		8417913A208343D900B6114B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84179138208343D900B6114B /* Main.storyboard */; };
 		8417913C208343D900B6114B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8417913B208343D900B6114B /* Assets.xcassets */; };
 		8417913F208343D900B6114B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8417913D208343D900B6114B /* LaunchScreen.storyboard */; };
+		849D0CB42085731F00D01D0D /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D0CB32085731F00D01D0D /* Music.swift */; };
+		849D0CB62085957400D01D0D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D0CB52085957400D01D0D /* SettingsViewController.swift */; };
+		84ABA96D20839B3100DB3745 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ABA96C20839B3100DB3745 /* Authentication.storyboard */; };
+		84ABA96F20839BC400DB3745 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 84ABA96E20839BC400DB3745 /* Fonts */; };
+		84ABA9732083A2E700DB3745 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA9702083A2E700DB3745 /* ForgotPasswordViewController.swift */; };
+		84ABA9742083A2E700DB3745 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA9712083A2E700DB3745 /* SignInViewController.swift */; };
+		84ABA9752083A2E700DB3745 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA9722083A2E700DB3745 /* SignUpViewController.swift */; };
+		84DFF8E7208A2A930014E145 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */; };
+		84E8FD5E208B12E7006FE00F /* InteractivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8FD5C208B12E7006FE00F /* InteractivePlayerView.swift */; };
+		84E8FD5F208B12E7006FE00F /* InteractivePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E8FD5D208B12E7006FE00F /* InteractivePlayerView.xib */; };
+		84FB7DE6208514C00040A185 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB7DE5208514C00040A185 /* HomeViewController.swift */; };
+		84FB7DE8208518D40040A185 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FB7DE7208518D40040A185 /* GoogleService-Info.plist */; };
+		84FB7DEA2085195E0040A185 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FB7DE92085195E0040A185 /* Home.storyboard */; };
 		D8C91993F7F3E2F40459EDEF /* Pods_Rodeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6573D6778778C85EABB05E8 /* Pods_Rodeo.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +32,23 @@
 		84179131208343D900B6114B /* Rodeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rodeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84179134208343D900B6114B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84179136208343D900B6114B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		84179139208343D900B6114B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8417913B208343D900B6114B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8417913E208343D900B6114B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84179140208343D900B6114B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8444A845523EA2DC5EF68755 /* Pods-Rodeo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rodeo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rodeo/Pods-Rodeo.release.xcconfig"; sourceTree = "<group>"; };
+		849D0CB32085731F00D01D0D /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		849D0CB52085957400D01D0D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		84ABA96C20839B3100DB3745 /* Authentication.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		84ABA96E20839BC400DB3745 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		84ABA9702083A2E700DB3745 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		84ABA9712083A2E700DB3745 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		84ABA9722083A2E700DB3745 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		84E8FD5C208B12E7006FE00F /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePlayerView.swift; sourceTree = "<group>"; };
+		84E8FD5D208B12E7006FE00F /* InteractivePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractivePlayerView.xib; sourceTree = "<group>"; };
+		84FB7DE5208514C00040A185 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		84FB7DE7208518D40040A185 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84FB7DE92085195E0040A185 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		D6573D6778778C85EABB05E8 /* Pods_Rodeo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rodeo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,6 +79,7 @@
 				84179133208343D900B6114B /* Rodeo */,
 				84179132208343D900B6114B /* Products */,
 				67C2DA2EDEF5B6AEC5CBF505 /* Pods */,
+				84E8FD5B208B12E7006FE00F /* ipv_source */,
 				9DF15F985FC9999ADBB72F17 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -70,14 +95,34 @@
 		84179133208343D900B6114B /* Rodeo */ = {
 			isa = PBXGroup;
 			children = (
+				84ABA96E20839BC400DB3745 /* Fonts */,
+				84ABA9702083A2E700DB3745 /* ForgotPasswordViewController.swift */,
+				84ABA9712083A2E700DB3745 /* SignInViewController.swift */,
+				84ABA9722083A2E700DB3745 /* SignUpViewController.swift */,
 				84179134208343D900B6114B /* AppDelegate.swift */,
 				84179136208343D900B6114B /* ViewController.swift */,
-				84179138208343D900B6114B /* Main.storyboard */,
+				84ABA96C20839B3100DB3745 /* Authentication.storyboard */,
 				8417913B208343D900B6114B /* Assets.xcassets */,
 				8417913D208343D900B6114B /* LaunchScreen.storyboard */,
 				84179140208343D900B6114B /* Info.plist */,
+				84FB7DE7208518D40040A185 /* GoogleService-Info.plist */,
+				84FB7DE5208514C00040A185 /* HomeViewController.swift */,
+				84FB7DE92085195E0040A185 /* Home.storyboard */,
+				849D0CB32085731F00D01D0D /* Music.swift */,
+				849D0CB52085957400D01D0D /* SettingsViewController.swift */,
+				84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */,
 			);
 			path = Rodeo;
+			sourceTree = "<group>";
+		};
+		84E8FD5B208B12E7006FE00F /* ipv_source */ = {
+			isa = PBXGroup;
+			children = (
+				84E8FD5C208B12E7006FE00F /* InteractivePlayerView.swift */,
+				84E8FD5D208B12E7006FE00F /* InteractivePlayerView.xib */,
+			);
+			name = ipv_source;
+			path = Rodeo/ipv_source;
 			sourceTree = "<group>";
 		};
 		9DF15F985FC9999ADBB72F17 /* Frameworks */ = {
@@ -100,7 +145,6 @@
 				8417912E208343D800B6114B /* Frameworks */,
 				8417912F208343D800B6114B /* Resources */,
 				DF08FE076F721FC93913330C /* [CP] Embed Pods Frameworks */,
-				83176660A16BC0A5EE29ED44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,8 +167,12 @@
 				TargetAttributes = {
 					84179130208343D800B6114B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QRN4KZF673;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -151,9 +199,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ABA96F20839BC400DB3745 /* Fonts in Resources */,
+				84ABA96D20839B3100DB3745 /* Authentication.storyboard in Resources */,
+				84FB7DE8208518D40040A185 /* GoogleService-Info.plist in Resources */,
+				84FB7DEA2085195E0040A185 /* Home.storyboard in Resources */,
 				8417913F208343D900B6114B /* LaunchScreen.storyboard in Resources */,
+				84E8FD5F208B12E7006FE00F /* InteractivePlayerView.xib in Resources */,
 				8417913C208343D900B6114B /* Assets.xcassets in Resources */,
-				8417913A208343D900B6114B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,28 +218,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rodeo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		83176660A16BC0A5EE29ED44 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rodeo/Pods-Rodeo-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF08FE076F721FC93913330C /* [CP] Embed Pods Frameworks */ = {
@@ -196,9 +236,28 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Rodeo/Pods-Rodeo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ESTMusicIndicator/ESTMusicIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTMusicIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -212,22 +271,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ABA9742083A2E700DB3745 /* SignInViewController.swift in Sources */,
 				84179137208343D900B6114B /* ViewController.swift in Sources */,
 				84179135208343D900B6114B /* AppDelegate.swift in Sources */,
+				84ABA9732083A2E700DB3745 /* ForgotPasswordViewController.swift in Sources */,
+				84E8FD5E208B12E7006FE00F /* InteractivePlayerView.swift in Sources */,
+				849D0CB42085731F00D01D0D /* Music.swift in Sources */,
+				84ABA9752083A2E700DB3745 /* SignUpViewController.swift in Sources */,
+				84FB7DE6208514C00040A185 /* HomeViewController.swift in Sources */,
+				84DFF8E7208A2A930014E145 /* MusicPlayerViewController.swift in Sources */,
+				849D0CB62085957400D01D0D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		84179138208343D900B6114B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84179139208343D900B6114B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8417913D208343D900B6114B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -337,7 +396,7 @@
 			baseConfigurationReference = 58AEBBD486146E2956E020A4 /* Pods-Rodeo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QRN4KZF673;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Rodeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AstroWorld.Rodeo;
@@ -351,7 +410,7 @@
 			baseConfigurationReference = 8444A845523EA2DC5EF68755 /* Pods-Rodeo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QRN4KZF673;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Rodeo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AstroWorld.Rodeo;

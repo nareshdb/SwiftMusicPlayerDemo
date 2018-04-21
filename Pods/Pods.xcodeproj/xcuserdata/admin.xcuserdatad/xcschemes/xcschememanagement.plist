@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ESTMusicIndicator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,17 +19,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>PandoraPlayer.xcscheme</key>
+		<key>Pods-Rodeo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Rodeo.xcscheme</key>
+		<key>SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Toast-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,6 +57,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>08EBDBC282487BBD172F24A57213F49D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09A465D0F26EF667D96E9D22899B409A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
@@ -57,12 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8621D6F8CC5833DA97C935EA89EF2C57</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B723ADF5F636644DB5E4D5A1780606CD</key>
+		<key>64E29686EEB5D9C53356E15C80631A1C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +92,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C235F77E101E742652CCF98FFDFA5182</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD5FD6B466BE76A6A56858FB9F9B693E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

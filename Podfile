@@ -6,11 +6,13 @@ target 'Rodeo' do
   use_frameworks!
 
   # Pods for Rodeo
-  pod 'PandoraPlayer'
-  pod 'Firebase/Auth'
+#  pod 'PandoraPlayer', :git => 'https://github.com/nareshdb/PandoraPlayer.git', :commit => '780f32c8ed02305b968025c18d780036605b74a0'
+  pod 'SwiftyJSON'
+  pod 'IQKeyboardManagerSwift'
+  pod 'ESTMusicIndicator'
+  pod 'Firebase/Auth'  
   pod 'Firebase/Database'
   pod 'NVActivityIndicatorView'
-
-
+  pod 'Toast-Swift'
 
 end
