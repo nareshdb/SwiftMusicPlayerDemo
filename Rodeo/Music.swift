@@ -24,8 +24,8 @@ class Music: NSObject {
         let data = JSON(snapshot.value!)
         
         self.name = data["name"].stringValue
-        self.songURL = URL(string: data["song_url"].stringValue)
-        self.coverImage = URL(string: data["cover_image"].stringValue)
+        self.songURL = URL(string: data["file_path"].stringValue)
+        self.coverImage = URL(string: data["artist"].stringValue)
         self.key = snapshot.key
         
     }

@@ -33,6 +33,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             })
         ]
+        self.tblSettings.reloadData()
     }
     
     

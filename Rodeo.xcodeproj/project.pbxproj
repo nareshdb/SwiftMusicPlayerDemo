@@ -21,6 +21,7 @@
 		84DFF8E7208A2A930014E145 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */; };
 		84E8FD5E208B12E7006FE00F /* InteractivePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8FD5C208B12E7006FE00F /* InteractivePlayerView.swift */; };
 		84E8FD5F208B12E7006FE00F /* InteractivePlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84E8FD5D208B12E7006FE00F /* InteractivePlayerView.xib */; };
+		84E8FD61208B428C006FE00F /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8FD60208B428C006FE00F /* MusicTableViewCell.swift */; };
 		84FB7DE6208514C00040A185 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB7DE5208514C00040A185 /* HomeViewController.swift */; };
 		84FB7DE8208518D40040A185 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FB7DE7208518D40040A185 /* GoogleService-Info.plist */; };
 		84FB7DEA2085195E0040A185 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FB7DE92085195E0040A185 /* Home.storyboard */; };
@@ -46,6 +47,7 @@
 		84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		84E8FD5C208B12E7006FE00F /* InteractivePlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractivePlayerView.swift; sourceTree = "<group>"; };
 		84E8FD5D208B12E7006FE00F /* InteractivePlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InteractivePlayerView.xib; sourceTree = "<group>"; };
+		84E8FD60208B428C006FE00F /* MusicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		84FB7DE5208514C00040A185 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84FB7DE7208518D40040A185 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84FB7DE92085195E0040A185 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				849D0CB32085731F00D01D0D /* Music.swift */,
 				849D0CB52085957400D01D0D /* SettingsViewController.swift */,
 				84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */,
+				84E8FD60208B428C006FE00F /* MusicTableViewCell.swift */,
 			);
 			path = Rodeo;
 			sourceTree = "<group>";
@@ -237,10 +240,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rodeo/Pods-Rodeo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTMusicIndicator/ESTMusicIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/KDEAudioPlayer/KDEAudioPlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -249,10 +255,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTMusicIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDEAudioPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -280,6 +289,7 @@
 				84ABA9752083A2E700DB3745 /* SignUpViewController.swift in Sources */,
 				84FB7DE6208514C00040A185 /* HomeViewController.swift in Sources */,
 				84DFF8E7208A2A930014E145 /* MusicPlayerViewController.swift in Sources */,
+				84E8FD61208B428C006FE00F /* MusicTableViewCell.swift in Sources */,
 				849D0CB62085957400D01D0D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

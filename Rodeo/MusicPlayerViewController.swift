@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import KDEAudioPlayer
 
 class MusicPlayerViewController: UIViewController {
     
-    @IBOutlet var musicPlayerView: InteractivePlayerView!
     @IBOutlet weak var blurBgImage: UIImageView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var ipv: InteractivePlayerView!
@@ -18,10 +18,26 @@ class MusicPlayerViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var playPauseButtonView: UIView!
     
-    static var sharedPlayer: MusicPlayerViewController {
+    static var sharedPlayer: MusicPlayerViewController = {
         let vc = UIStoryboard(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "MusicPlayerViewController") as! MusicPlayerViewController
         _ = vc.view
         return vc
+    }()
+    
+    var player = AudioPlayer.init()
+    
+    var currentMusicItem: Music? = nil {
+        didSet {
+            if self.isViewLoaded {
+                // duration of music
+                self.ipv.progress = 50.0
+                self.ipv.stop()
+                self.player.stop()
+                self.player.removeItem(at: 0)
+                let item = AudioItem.init(highQualitySoundURL: nil, mediumQualitySoundURL: self.currentMusicItem?.songURL!, lowQualitySoundURL: nil)
+                self.player.play(item: item!)
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -29,11 +45,8 @@ class MusicPlayerViewController: UIViewController {
         self.view.layoutIfNeeded()
         self.view.backgroundColor = UIColor.clear
         self.makeItRounded(view: self.playPauseButtonView, newSize: self.playPauseButtonView.frame.width)
-        
         self.ipv!.delegate = self
         
-        // duration of music
-        self.ipv.progress = 20.0
     }
 
     @IBAction func playButtonTapped(_ sender: UIButton) {
@@ -69,9 +82,6 @@ class MusicPlayerViewController: UIViewController {
 
 extension MusicPlayerViewController: InteractivePlayerViewDelegate {
     
-    
-    
-    /* InteractivePlayerViewDelegate METHODS */
     func actionOneButtonTapped(sender: UIButton, isSelected: Bool) {
         print("shuffle \(isSelected.description)")
     }

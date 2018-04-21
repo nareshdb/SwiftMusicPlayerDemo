@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import Kingfisher
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -27,7 +28,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func addDBObservers() {
         
-        Database.database().reference().child(Auth.auth().currentUser!.uid).child("my_songs").observe(.childAdded, with: { (snap) in
+        Database.database().reference().child("songs").observe(.childAdded, with: { (snap) in
             let music = Music(snapshot: snap)
             self.songs.append(music)
             self.tblSongs.reloadData()
@@ -36,11 +37,20 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! MusicTableViewCell
+        let music = self.songs[indexPath.row]
+        cell.imgLabel.kf.indicatorType = .activity
+        cell.imgLabel.kf.setImage(with: music.coverImage, placeholder: #imageLiteral(resourceName: "placeholder"), options: nil, progressBlock: nil, completionHandler: nil)
+        cell.lblSongName.text = music.name
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        MusicPlayerViewController.sharedPlayer.currentMusicItem = self.songs[indexPath.row]
     }
     
     @IBAction func musicTapped(_ sender: UIButton) {

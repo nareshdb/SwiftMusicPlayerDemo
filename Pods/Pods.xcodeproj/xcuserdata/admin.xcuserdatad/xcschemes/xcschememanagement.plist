@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DynamicBlurView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ESTMusicIndicator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,16 @@
 			<false/>
 		</dict>
 		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KDEAudioPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,16 +72,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08EBDBC282487BBD172F24A57213F49D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>09A465D0F26EF667D96E9D22899B409A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
@@ -77,12 +82,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1E278A26C8524A7938711B0E9B2841CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3B08C49A396BAA0D9DCAD4460CC52F95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64E29686EEB5D9C53356E15C80631A1C</key>
+		<key>5F1816D21B95908817713906E00F0BD4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6F712943B3C5592E82604940D11CE08A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6FBA806572EC075E0A3F0212B077793B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AD6E417B292CCB529632F0FA6F2EFEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5F5E19547DA9A793D973C8C1A09BA8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
