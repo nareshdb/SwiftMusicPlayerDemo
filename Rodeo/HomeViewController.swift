@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 import Kingfisher
+import DynamicBlurView
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -19,11 +20,42 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var songs: [Music] = []
     var currentlyPlaying: Music!
+    var blurView: DynamicBlurView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.addDBObservers()
+        self.blurView = DynamicBlurView.init(frame: self.view.bounds)
+        self.blurView.blurRadius = 5
+        self.checkSubscription()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.checkSubscription), name: NSNotification.Name.init("subscribed"), object: nil)
+    }
+    
+    @objc
+    func checkSubscription() {
+        Database
+            .database()
+            .reference()
+            .child("Users")
+            .child(Auth.auth().currentUser!.uid)
+            .child("subscriptionDeadline")
+            .observe(.value, with: { (snap) in
+                if let time = snap.value as? TimeInterval,
+                    time > Date().timeIntervalSince1970
+                {
+                    self.isSubscribedView.isHidden = true
+                    self.addDBObservers()
+                }
+                else {
+                    self.isSubscribedView.isHidden = false
+                }
+        })
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.blurView.frame = self.view.bounds
     }
     
     func addDBObservers() {
@@ -57,5 +89,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func musicTapped(_ sender: UIButton) {
         self.present(MusicPlayerViewController.sharedPlayer, animated: true, completion: nil)
+    }
+    
+    @IBAction func btnSubscribedTapped(_ sender: UIButton) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubscriptionViewController") as! SubscriptionViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
