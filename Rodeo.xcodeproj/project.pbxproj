@@ -19,6 +19,7 @@
 		84ABA9732083A2E700DB3745 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA9702083A2E700DB3745 /* ForgotPasswordViewController.swift */; };
 		84ABA9742083A2E700DB3745 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA9712083A2E700DB3745 /* SignInViewController.swift */; };
 		84ABA9752083A2E700DB3745 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ABA9722083A2E700DB3745 /* SignUpViewController.swift */; };
+		84ADEDB9209201BB005FC41A /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADEDB8209201BB005FC41A /* LineView.swift */; };
 		84D6066C2090B93400404D94 /* MusicPlayerTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6066A2090B93400404D94 /* MusicPlayerTransitionAnimation.swift */; };
 		84D6066D2090B93400404D94 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6066B2090B93400404D94 /* ModalViewController.swift */; };
 		84DFF8E7208A2A930014E145 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */; };
@@ -48,6 +49,7 @@
 		84ABA9702083A2E700DB3745 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		84ABA9712083A2E700DB3745 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		84ABA9722083A2E700DB3745 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		84ADEDB8209201BB005FC41A /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		84D6066A2090B93400404D94 /* MusicPlayerTransitionAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerTransitionAnimation.swift; sourceTree = "<group>"; };
 		84D6066B2090B93400404D94 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		84179133208343D900B6114B /* Rodeo */ = {
 			isa = PBXGroup;
 			children = (
+				84ADEDB8209201BB005FC41A /* LineView.swift */,
 				84ABA96E20839BC400DB3745 /* Fonts */,
 				84ABA9702083A2E700DB3745 /* ForgotPasswordViewController.swift */,
 				84ABA9712083A2E700DB3745 /* SignInViewController.swift */,
@@ -249,6 +252,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rodeo/Pods-Rodeo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARNTransitionAnimator/ARNTransitionAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTMusicIndicator/ESTMusicIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -264,6 +268,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARNTransitionAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTMusicIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -297,6 +302,7 @@
 				84E8FD5E208B12E7006FE00F /* InteractivePlayerView.swift in Sources */,
 				84D6066D2090B93400404D94 /* ModalViewController.swift in Sources */,
 				849D0CB42085731F00D01D0D /* Music.swift in Sources */,
+				84ADEDB9209201BB005FC41A /* LineView.swift in Sources */,
 				84009363208CAD0900667B12 /* SubscriptionViewController.swift in Sources */,
 				84ABA9752083A2E700DB3745 /* SignUpViewController.swift in Sources */,
 				84FB7DE6208514C00040A185 /* HomeViewController.swift in Sources */,

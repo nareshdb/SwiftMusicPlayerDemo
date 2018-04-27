@@ -10,6 +10,7 @@ target 'Rodeo' do
   pod 'KDEAudioPlayer'
   pod 'Kingfisher'
   pod "DynamicBlurView", '2.0.0'
+  pod 'ARNTransitionAnimator'
   pod 'SwiftyJSON'
   pod 'IQKeyboardManagerSwift'
   pod 'ESTMusicIndicator'

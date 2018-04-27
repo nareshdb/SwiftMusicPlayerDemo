@@ -25,7 +25,7 @@
                 <navigationController navigationBarHidden="YES" id="TPG-v5-i1Q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Music Store" image="ic_BuyGreyIcon" id="FBO-DQ-aNe"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1fy-du-ddJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1fy-du-ddJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -53,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscription Plans" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PG-0b-mgZ">
-                                        <rect key="frame" x="114" y="20" width="148" height="44"/>
+                                        <rect key="frame" x="114.5" y="20" width="147.5" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="bTD-nJ-Nbn"/>
                                         </constraints>
@@ -87,19 +87,19 @@
                                         <rect key="frame" x="0.0" y="0.0" width="185" height="160"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXZ-fY-ghi">
-                                                <rect key="frame" x="59" y="48" width="67" height="24"/>
+                                                <rect key="frame" x="59.5" y="48.5" width="67" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹ 39.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRO-85-TeS">
-                                                <rect key="frame" x="50" y="80" width="86" height="35"/>
+                                                <rect key="frame" x="50.5" y="80" width="85.5" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="tYQ-xd-oAX">
-                                                <rect key="frame" x="77" y="120" width="32" height="32"/>
+                                                <rect key="frame" x="77" y="119.5" width="32" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="FsW-RH-jlT"/>
                                                     <constraint firstAttribute="height" constant="32" id="OPV-6W-nba"/>
@@ -131,19 +131,19 @@
                                         <rect key="frame" x="190" y="0.0" width="185" height="160"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Je-uT-JPy">
-                                                <rect key="frame" x="67" y="48" width="50" height="24"/>
+                                                <rect key="frame" x="67.5" y="48.5" width="49.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹ 199.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxK-vY-3P5">
-                                                <rect key="frame" x="43" y="80" width="100" height="35"/>
+                                                <rect key="frame" x="43.5" y="80" width="99.5" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="F5R-qP-aVE">
-                                                <rect key="frame" x="77" y="120" width="32" height="32"/>
+                                                <rect key="frame" x="77" y="119.5" width="32" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="32" id="3Ha-j0-aQb"/>
                                                     <constraint firstAttribute="height" constant="32" id="VMi-Ik-VMg"/>
@@ -191,10 +191,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sho-3D-9mJ">
-                                                <rect key="frame" x="15" y="15" width="345" height="34"/>
+                                                <rect key="frame" x="15" y="15" width="345" height="33.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ Unlimited access to all songs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0y-He-Fzv">
-                                                        <rect key="frame" x="0.0" y="5" width="330" height="24"/>
+                                                        <rect key="frame" x="0.0" y="5" width="330" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -209,10 +209,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLj-ng-dtM">
-                                                <rect key="frame" x="15" y="49" width="345" height="34"/>
+                                                <rect key="frame" x="15" y="48.5" width="345" height="33.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ High Quality Audio streaming." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW7-Fz-BRK">
-                                                        <rect key="frame" x="0.0" y="5" width="330" height="24"/>
+                                                        <rect key="frame" x="0.0" y="5" width="330" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -227,10 +227,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPU-ew-z2F">
-                                                <rect key="frame" x="15" y="83" width="345" height="57"/>
+                                                <rect key="frame" x="15" y="82" width="345" height="56.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ Share your subscription with 4 of your family members." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-GW-zY0">
-                                                        <rect key="frame" x="0.0" y="5" width="330" height="47"/>
+                                                        <rect key="frame" x="0.0" y="5" width="330" height="46.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -245,10 +245,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bv-Oo-DbQ">
-                                                <rect key="frame" x="15" y="140" width="345" height="57"/>
+                                                <rect key="frame" x="15" y="138.5" width="345" height="56.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ Keep your favorite songs in seperate playlist." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRm-lF-NjS">
-                                                        <rect key="frame" x="0.0" y="5" width="330" height="47"/>
+                                                        <rect key="frame" x="0.0" y="5" width="330" height="46.5"/>
                                                         <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -486,7 +486,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="ic_HomeUnSelectedIcon" id="z2j-6M-QRe"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="65s-Zs-wNJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="65s-Zs-wNJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -527,31 +527,13 @@
                                             <constraint firstAttribute="width" constant="40" id="sjl-2y-UVh"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRQ-la-z6x">
-                                        <rect key="frame" x="325" y="19" width="40" height="40"/>
-                                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
-                                        <state key="normal" image="play"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="musicTapped:" destination="bIs-hl-6q3" eventType="touchUpInside" id="u4a-w7-qwt"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="SRQ-la-z6x" firstAttribute="leading" secondItem="HlF-cH-sjA" secondAttribute="leading" id="5ou-Ob-Z9u"/>
-                                    <constraint firstItem="SRQ-la-z6x" firstAttribute="bottom" secondItem="HlF-cH-sjA" secondAttribute="bottom" id="7o1-V0-itX"/>
                                     <constraint firstAttribute="height" constant="64" id="9CS-0A-gLw"/>
                                     <constraint firstAttribute="bottom" secondItem="HlF-cH-sjA" secondAttribute="bottom" constant="5" id="EEw-V6-nyV"/>
                                     <constraint firstItem="ERb-so-hy4" firstAttribute="top" secondItem="iep-Ib-93t" secondAttribute="top" constant="20" id="FZA-M0-ysG"/>
                                     <constraint firstAttribute="trailing" secondItem="HlF-cH-sjA" secondAttribute="trailing" constant="10" id="UQK-7E-4so"/>
-                                    <constraint firstItem="SRQ-la-z6x" firstAttribute="trailing" secondItem="HlF-cH-sjA" secondAttribute="trailing" id="Wbb-SG-rXO"/>
-                                    <constraint firstItem="SRQ-la-z6x" firstAttribute="top" secondItem="HlF-cH-sjA" secondAttribute="top" id="aU8-w2-zae"/>
                                     <constraint firstItem="ERb-so-hy4" firstAttribute="centerX" secondItem="iep-Ib-93t" secondAttribute="centerX" id="gOb-8V-M4z"/>
                                 </constraints>
                             </view>
@@ -577,13 +559,13 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVA-aY-BVN">
-                                                            <rect key="frame" x="80" y="0.0" width="275" height="55"/>
+                                                            <rect key="frame" x="80" y="0.0" width="275" height="55.5"/>
                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                             <color key="textColor" red="0.11764705882352941" green="0.15686274509803921" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMi-SX-xuI">
-                                                            <rect key="frame" x="80" y="55" width="275" height="17"/>
+                                                            <rect key="frame" x="80" y="55.5" width="275" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -696,7 +678,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="ic_SettingsWhiteIcon" id="gOz-f1-Upx"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bTd-N5-UxV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bTd-N5-UxV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -977,7 +959,7 @@
         <!--View Controller-->
         <scene sceneID="GBQ-Ng-JLH">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="He9-OP-ZDN" customClass="ViewController" customModule="Rodeo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeNVC" automaticallyAdjustsScrollViewInsets="NO" id="He9-OP-ZDN" customClass="ViewController" customModule="Rodeo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UjH-Vy-Pzr"/>
                         <viewControllerLayoutGuide type="bottom" id="Dgy-mB-jli"/>
@@ -994,7 +976,7 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c20-CT-lUL" customClass="LineView" customModule="Rodeo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="irs-x4-bkN">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1048,43 +1030,22 @@
                                     <constraint firstItem="irs-x4-bkN" firstAttribute="top" secondItem="c20-CT-lUL" secondAttribute="top" id="ygt-lb-caI"/>
                                 </constraints>
                             </view>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4m-09-gzn">
-                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="243-V5-mCw"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem systemItem="favorites" id="Pju-Ft-SWV"/>
-                                    <tabBarItem systemItem="more" id="ofS-De-vBj"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="x4m-09-gzn" secondAttribute="trailing" id="2bB-IH-5aX"/>
                             <constraint firstItem="0QR-Ja-OBs" firstAttribute="top" secondItem="EOw-Yh-YsP" secondAttribute="top" id="72A-cn-FCr"/>
                             <constraint firstItem="Dgy-mB-jli" firstAttribute="top" secondItem="0QR-Ja-OBs" secondAttribute="bottom" id="BpL-ap-Zo8"/>
                             <constraint firstItem="c20-CT-lUL" firstAttribute="leading" secondItem="EOw-Yh-YsP" secondAttribute="leading" id="GlZ-EC-ofO"/>
-                            <constraint firstItem="x4m-09-gzn" firstAttribute="leading" secondItem="EOw-Yh-YsP" secondAttribute="leading" id="LIq-mB-fIb"/>
-                            <constraint firstItem="Dgy-mB-jli" firstAttribute="top" secondItem="x4m-09-gzn" secondAttribute="bottom" id="LeZ-9o-heM"/>
                             <constraint firstAttribute="trailing" secondItem="c20-CT-lUL" secondAttribute="trailing" id="PG9-tM-dIc"/>
                             <constraint firstAttribute="trailing" secondItem="0QR-Ja-OBs" secondAttribute="trailing" id="Som-f8-ZpN"/>
-                            <constraint firstItem="x4m-09-gzn" firstAttribute="top" secondItem="0QR-Ja-OBs" secondAttribute="bottom" id="W6n-Be-9sJ"/>
-                            <constraint firstItem="x4m-09-gzn" firstAttribute="top" secondItem="c20-CT-lUL" secondAttribute="bottom" id="ZRU-1J-169"/>
+                            <constraint firstItem="Dgy-mB-jli" firstAttribute="top" secondItem="c20-CT-lUL" secondAttribute="bottom" id="fMN-l9-dx9"/>
                             <constraint firstItem="0QR-Ja-OBs" firstAttribute="leading" secondItem="EOw-Yh-YsP" secondAttribute="leading" id="zaZ-by-k6m"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="W6n-Be-9sJ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="0QR-Ja-OBs" id="B3P-mj-BPb"/>
                         <outlet property="miniPlayerButton" destination="Xwx-ak-06M" id="OWy-1l-cTC"/>
                         <outlet property="miniPlayerView" destination="c20-CT-lUL" id="cxj-HP-xUH"/>
-                        <outlet property="tabBar" destination="x4m-09-gzn" id="bwL-fu-zIH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmI-G1-zOm" sceneMemberID="firstResponder"/>
@@ -1136,7 +1097,7 @@
         <scene sceneID="s8k-82-Woi">
             <objects>
                 <navigationController id="wFi-t4-bhQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KO3-Oe-4BP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KO3-Oe-4BP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

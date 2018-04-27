@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ARNTransitionAnimator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DynamicBlurView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,7 +87,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1E278A26C8524A7938711B0E9B2841CF</key>
+		<key>1533F149321A5BC3F7398E3A1A1CC6D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B86E616B31986EE3D3CD4CE157EB11A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F1816D21B95908817713906E00F0BD4</key>
+		<key>4C68D766BB856758C94E7181A6A24FC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6F0D986586E4ADBA72DEB5F14B623803</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6F712943B3C5592E82604940D11CE08A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6FBA806572EC075E0A3F0212B077793B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
