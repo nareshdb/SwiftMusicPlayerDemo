@@ -22,7 +22,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
         self.modalVC = storyboard.instantiateViewController(withIdentifier: "ModalViewController") as? ModalViewController
         self.modalVC.modalPresentationStyle = .overFullScreen
         
@@ -51,7 +51,7 @@ final class ViewController: UIViewController {
                 guard let _self = self else { return }
                 let modalGestureHandler = TransitionGestureHandler(targetVC: _self, direction: .bottom)
                 modalGestureHandler.registerGesture(_self.modalVC.view)
-                modalGestureHandler.panCompletionThreshold = 15.0
+                modalGestureHandler.panCompletionThreshold = 5.0
                 _self.animator?.registerInteractiveTransitioning(.dismiss, gestureHandler: modalGestureHandler)
             } else {
                 self?.setupAnimator()
@@ -69,6 +69,7 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func tapMiniPlayerButton() {
+        self.modalVC.dismiss(animated: false, completion: nil)
         self.present(self.modalVC, animated: true, completion: nil)
     }
     
