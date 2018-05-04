@@ -13,6 +13,7 @@ class SubscriptionViewController: UIViewController {
     @IBOutlet weak var imgCart: UIImageView!
     @IBOutlet weak var imgCartYear: UIImageView!
     
+    
     var selectedPlan = 0 {
         didSet {
             if !self.isViewLoaded {
@@ -35,7 +36,8 @@ class SubscriptionViewController: UIViewController {
     }
 
     @IBAction func btnSubscribe(_ sender: UIButton) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func btnSelectMonth(_ sender: Any) {

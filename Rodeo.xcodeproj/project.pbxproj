@@ -29,6 +29,7 @@
 		84FB7DE6208514C00040A185 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB7DE5208514C00040A185 /* HomeViewController.swift */; };
 		84FB7DE8208518D40040A185 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84FB7DE7208518D40040A185 /* GoogleService-Info.plist */; };
 		84FB7DEA2085195E0040A185 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FB7DE92085195E0040A185 /* Home.storyboard */; };
+		84FF2A91209A8F1200EEAC8A /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FF2A90209A8F1200EEAC8A /* PaymentViewController.swift */; };
 		D8C91993F7F3E2F40459EDEF /* Pods_Rodeo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6573D6778778C85EABB05E8 /* Pods_Rodeo.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		84FB7DE5208514C00040A185 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		84FB7DE7208518D40040A185 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84FB7DE92085195E0040A185 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		84FF2A90209A8F1200EEAC8A /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		D6573D6778778C85EABB05E8 /* Pods_Rodeo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rodeo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 				84DFF8E6208A2A930014E145 /* MusicPlayerViewController.swift */,
 				84E8FD60208B428C006FE00F /* MusicTableViewCell.swift */,
 				84009362208CAD0900667B12 /* SubscriptionViewController.swift */,
+				84FF2A90209A8F1200EEAC8A /* PaymentViewController.swift */,
 			);
 			path = Rodeo;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Rodeo/Pods-Rodeo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ARNTransitionAnimator/ARNTransitionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/CreditCardForm/CreditCardForm.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/ESTMusicIndicator/ESTMusicIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -260,6 +264,7 @@
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/KDEAudioPlayer/KDEAudioPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MFCard/MFCard.framework",
 				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
@@ -269,6 +274,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARNTransitionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CreditCardForm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTMusicIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -276,6 +282,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KDEAudioPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MFCard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
@@ -297,6 +304,7 @@
 				84ABA9742083A2E700DB3745 /* SignInViewController.swift in Sources */,
 				84179137208343D900B6114B /* ViewController.swift in Sources */,
 				84179135208343D900B6114B /* AppDelegate.swift in Sources */,
+				84FF2A91209A8F1200EEAC8A /* PaymentViewController.swift in Sources */,
 				84ABA9732083A2E700DB3745 /* ForgotPasswordViewController.swift in Sources */,
 				84D6066C2090B93400404D94 /* MusicPlayerTransitionAnimation.swift in Sources */,
 				84E8FD5E208B12E7006FE00F /* InteractivePlayerView.swift in Sources */,

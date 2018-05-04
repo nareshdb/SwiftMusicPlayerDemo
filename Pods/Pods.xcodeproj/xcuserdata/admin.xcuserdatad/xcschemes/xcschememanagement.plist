@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CreditCardForm-CreditCardForm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CreditCardForm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DynamicBlurView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -40,6 +50,16 @@
 			<false/>
 		</dict>
 		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MFCard-MFCard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MFCard.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -92,27 +112,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B86E616B31986EE3D3CD4CE157EB11A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>3B08C49A396BAA0D9DCAD4460CC52F95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C68D766BB856758C94E7181A6A24FC0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6F0D986586E4ADBA72DEB5F14B623803</key>
+		<key>6DDC0665C7C12A3B120BD15BD72D1D98</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6F712943B3C5592E82604940D11CE08A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>997661590AF5EBA8E0C701C64882651F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,12 +142,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>AAE1144C7966F3FD1A7D60BBB0BBF821</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B86689572CFB3A52D451B255633F626F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C224BE304A8DBA02274DEAC0BD95A5BF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C235F77E101E742652CCF98FFDFA5182</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D24129F534825A5063CC804008781B19</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -143,6 +178,11 @@
 			<true/>
 		</dict>
 		<key>FD5FD6B466BE76A6A56858FB9F9B693E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE0755D7D797FE5315AF744C5B046557</key>
 		<dict>
 			<key>primary</key>
 			<true/>
