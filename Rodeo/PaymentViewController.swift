@@ -10,6 +10,7 @@ import UIKit
 import CreditCardForm
 import Stripe
 import FirebaseAuth
+import FirebaseDatabase
 
 class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
 
@@ -18,6 +19,7 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     let paymentTextField = STPPaymentCardTextField()
 
     var price: String = ""
+    var finalDate: TimeInterval = 5000.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,16 +73,41 @@ class PaymentViewController: UIViewController, STPPaymentCardTextFieldDelegate {
     }
 
     @IBAction func btnPay(_ sender: Any) {
-        let alert = UIAlertController.init(title: nil, message: "You will be charged " + self.price, preferredStyle: UIAlertControllerStyle.alert)
+        if !self.paymentTextField.isValid {
+            self.view.makeToast("Please enter valid values for card details")
+            return
+        }
+        let alert = UIAlertController.init(title: nil, message: "You will be charged  " + self.price, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: { (_) in
-            let alert = UIAlertController.init(title: nil, message: "Thank you for subscribing.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: { (_) in
-                appInstance.window!.rootViewController = nil
-                UIView.transition(with: appInstance.window!, duration: 0.5, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { () -> Void in
-                    appInstance.window!.rootViewController = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeNVC")
-                }, completion: nil)
-            }))
-            self.present(alert, animated: true, completion: nil)
+            appInstance.showLoader()
+            Database
+                .database()
+                .reference()
+                .child("Users")
+                .child(Auth.auth().currentUser!.uid)
+                .child("subscriptionDeadline")
+                .setValue(Date().timeIntervalSince1970 + self.finalDate, withCompletionBlock: { (error, ref) in
+                    appInstance.hideLoader()
+                    if error == nil {
+                        let alert = UIAlertController.init(title: nil, message: "Thank you for subscribing.", preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: { (_) in
+                            appInstance.window!.rootViewController = nil
+                            UIView.transition(with: appInstance.window!, duration: 0.5, options: UIViewAnimationOptions.transitionFlipFromLeft, animations: { () -> Void in
+                                appInstance.window!.rootViewController = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeNVC")
+                            }, completion: nil)
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    else {
+                        appInstance.hideLoader()
+                        let alert = UIAlertController.init(title: "Error occurred", message: error?.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
+                        alert.addAction(UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.default, handler: { (_) in
+                            
+                        }))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                })
+            
         }))
         alert.addAction(UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (_) in
             

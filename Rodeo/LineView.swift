@@ -10,6 +10,11 @@ import UIKit
 
 final class LineView: UIView {
 
+    @IBOutlet var imgCover: UIImageView!
+    @IBOutlet var lblSongTitle: UILabel!
+    @IBOutlet var btnPausePlay: UIButton!
+    
+    
     override func draw(_ rect: CGRect) {
         let topLine = UIBezierPath(rect: CGRect(x: 0, y: 0, width: self.frame.size.width, height: 0.5))
         UIColor.gray.setStroke()

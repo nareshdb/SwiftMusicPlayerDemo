@@ -34,6 +34,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @objc
     func checkSubscription() {
+        appInstance.showLoader()
         Database
             .database()
             .reference()
@@ -41,6 +42,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             .child(Auth.auth().currentUser!.uid)
             .child("subscriptionDeadline")
             .observe(.value, with: { (snap) in
+                appInstance.hideLoader()
                 if let time = snap.value as? TimeInterval,
                     time > Date().timeIntervalSince1970
                 {
@@ -78,6 +80,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.imgLabel.kf.indicatorType = .activity
         cell.imgLabel.kf.setImage(with: music.coverImage, placeholder: #imageLiteral(resourceName: "placeholder"), options: nil, progressBlock: nil, completionHandler: nil)
         cell.lblSongName.text = music.name
+        cell.lblArtistName.text = music.artistName
         cell.selectionStyle = .none
         return cell
     }

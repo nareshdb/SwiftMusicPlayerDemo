@@ -35,7 +35,8 @@ class MusicPlayerViewController: UIViewController {
                 self.player.stop()
                 let item = AudioItem.init(highQualitySoundURL: nil, mediumQualitySoundURL: self.currentMusicItem?.songURL!, lowQualitySoundURL: nil)
                 self.player.play(item: item!)
-                
+                playerView?.imgCover.kf.setImage(with: self.currentMusicItem?.coverImage)
+                playerView?.lblSongTitle.text = self.currentMusicItem?.name
             }
         }
     }

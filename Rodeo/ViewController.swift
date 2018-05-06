@@ -60,13 +60,6 @@ final class ViewController: UIViewController {
             }
         }
         
-        let gestureHandler = TransitionGestureHandler(targetVC: self, direction: .top)
-        gestureHandler.registerGesture(self.miniPlayerView)
-        gestureHandler.panCompletionThreshold = 15.0
-        
-        self.animator = ARNTransitionAnimator(duration: 0.5, animation: animation)
-        self.animator?.registerInteractiveTransitioning(.present, gestureHandler: gestureHandler)
-        
         self.modalVC.transitioningDelegate = self.animator
     }
     
