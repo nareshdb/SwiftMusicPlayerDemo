@@ -54,22 +54,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MFCard-MFCard.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MFCard.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>NVActivityIndicatorView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-Rodeo.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Stripe-Stripe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Stripe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -97,6 +97,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>05394B7C37CFC9C7CE3098BA5F410B14</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
@@ -112,22 +117,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>236B7357AA48EF3E0468F1CD11079CA3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3B08C49A396BAA0D9DCAD4460CC52F95</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6DDC0665C7C12A3B120BD15BD72D1D98</key>
+		<key>5611CB4AC6EA8D5EF22AD3843F287D85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6059563C71F7B4A841593EA5B4AD90D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>6F712943B3C5592E82604940D11CE08A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>997661590AF5EBA8E0C701C64882651F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,12 +152,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AAE1144C7966F3FD1A7D60BBB0BBF821</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B86689572CFB3A52D451B255633F626F</key>
+		<key>BBC3F7A0E12A0A62898D04E4950AE91C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,17 +162,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C224BE304A8DBA02274DEAC0BD95A5BF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>C235F77E101E742652CCF98FFDFA5182</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D24129F534825A5063CC804008781B19</key>
+		<key>D6C5C6F73A4D7396EEBB32FFB4F4FDB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,12 +177,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD5FD6B466BE76A6A56858FB9F9B693E</key>
+		<key>E87E3B1C2E071ECC193089135A2FA982</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE0755D7D797FE5315AF744C5B046557</key>
+		<key>FD5FD6B466BE76A6A56858FB9F9B693E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

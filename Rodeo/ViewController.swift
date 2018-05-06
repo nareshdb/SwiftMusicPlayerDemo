@@ -9,6 +9,8 @@
 import UIKit
 import ARNTransitionAnimator
 
+var playerView: LineView? = nil
+
 final class ViewController: UIViewController {
     
     @IBOutlet fileprivate(set) weak var containerView : UIView!
@@ -28,7 +30,7 @@ final class ViewController: UIViewController {
         
         let color = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 0.3)
         self.miniPlayerButton.setBackgroundImage(self.generateImageWithColor(color), for: .highlighted)
-        
+        playerView = miniPlayerView
         self.setupAnimator()
     }
     

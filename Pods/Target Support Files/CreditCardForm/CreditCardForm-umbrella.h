@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "CreditCardForm.h"
 
 FOUNDATION_EXPORT double CreditCardFormVersionNumber;
 FOUNDATION_EXPORT const unsigned char CreditCardFormVersionString[];

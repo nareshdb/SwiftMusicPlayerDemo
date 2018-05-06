@@ -13,7 +13,6 @@ class SubscriptionViewController: UIViewController {
     @IBOutlet weak var imgCart: UIImageView!
     @IBOutlet weak var imgCartYear: UIImageView!
     
-    
     var selectedPlan = 0 {
         didSet {
             if !self.isViewLoaded {
@@ -32,11 +31,16 @@ class SubscriptionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        DispatchQueue.main.async {
+            self.view.layoutIfNeeded()
+        }
         self.selectedPlan = 0
     }
 
     @IBAction func btnSubscribe(_ sender: UIButton) {
+        
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        vc.price = self.selectedPlan == 0 ? "₹ 39.99" : "₹ 199.99"
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -48,4 +52,7 @@ class SubscriptionViewController: UIViewController {
         self.selectedPlan = 1
     }
 
+    @IBAction func btnBackAction(_ sender: UIButton) {
+        _ = self.navigationController?.popViewController(animated: true)
+    }
 }

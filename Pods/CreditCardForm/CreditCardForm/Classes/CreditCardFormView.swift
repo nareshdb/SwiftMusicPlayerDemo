@@ -81,13 +81,6 @@ public class CreditCardFormView : UIView {
     }
     
     @IBInspectable
-    public var cardHolderPlaceholderString = "CARD HOLDER" {
-        didSet {
-            cardHolderText.text = cardHolderPlaceholderString
-        }
-    }
-    
-    @IBInspectable
     public var expireDatePlaceholderText = "EXPIRY" {
         didSet {
             expireDateText.text = expireDatePlaceholderText
@@ -277,7 +270,7 @@ public class CreditCardFormView : UIView {
         //Card holder uilabel
         cardHolderText.translatesAutoresizingMaskIntoConstraints = false
         cardHolderText.font = UIFont(name: "Helvetica Neue", size: 10)
-        cardHolderText.text = cardHolderPlaceholderString
+        cardHolderText.text = "CARD HOLDER"
         cardHolderText.textColor = cardHolderExpireDateTextColor
         frontView.addSubview(cardHolderText)
         
@@ -399,7 +392,7 @@ public class CreditCardFormView : UIView {
         
         if (cardNumber?.characters.count)! >= 7 || (cardNumber?.characters.count)! < 4 {
             
-            guard let type = v.type(from: "\(String(describing: cardNumber))") else {
+            guard let type = v.type(from: "\(cardNumber)") else {
                 self.brandImageView.image = nil
                 if let name = colors["NONE"] {
                     setType(colors: [name[0], name[1]], alpha: 0.5, back: name[0])

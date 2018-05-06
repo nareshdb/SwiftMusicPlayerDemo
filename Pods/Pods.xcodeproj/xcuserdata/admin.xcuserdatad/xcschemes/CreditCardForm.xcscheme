@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6DDC0665C7C12A3B120BD15BD72D1D98"
+               BlueprintIdentifier = "6059563C71F7B4A841593EA5B4AD90D3"
                BlueprintName = "CreditCardForm"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "CreditCardForm.framework">

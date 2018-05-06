@@ -31,7 +31,7 @@ final class MusicPlayerTransitionAnimation : TransitionAnimatable {
         self.modalVC = modalVC
         
         self.miniPlayerStartFrame = rootVC.miniPlayerView.frame
-        self.tabBarStartFrame = rootVC.tabBar.frame
+        self.tabBarStartFrame = (rootVC.tabBarController?.tabBar.frame)!
     }
     
     // @see : http://stackoverflow.com/questions/25588617/ios-8-screen-blank-after-dismissing-view-controller-with-custom-presentation
@@ -39,10 +39,10 @@ final class MusicPlayerTransitionAnimation : TransitionAnimatable {
         self.containerView = containerView
         if transitionType.isPresenting {
 //            self.modalVC.view.removeFromSuperview()
-            self.rootVC.view.insertSubview(self.modalVC.view, belowSubview: self.rootVC.tabBar)
+            self.rootVC.view.insertSubview(self.modalVC.view, belowSubview: (self.rootVC.tabBarController?.tabBar)!)
         } else {
 //            self.modalVC.view.removeFromSuperview()
-            self.rootVC.view.insertSubview(self.modalVC.view, belowSubview: self.rootVC.tabBar)
+            self.rootVC.view.insertSubview(self.modalVC.view, belowSubview: (self.rootVC.tabBarController?.tabBar)!)
         }
         self.rootVC.view.setNeedsLayout()
         self.rootVC.view.layoutIfNeeded()
@@ -50,7 +50,7 @@ final class MusicPlayerTransitionAnimation : TransitionAnimatable {
         self.modalVC.view.layoutIfNeeded()
         
         self.miniPlayerStartFrame = self.rootVC.miniPlayerView.frame
-        self.tabBarStartFrame = self.rootVC.tabBar.frame
+        self.tabBarStartFrame = (self.rootVC.tabBarController?.tabBar.frame)!
     }
     
     func willAnimation(_ transitionType: TransitionType, containerView: UIView) {
@@ -63,7 +63,7 @@ final class MusicPlayerTransitionAnimation : TransitionAnimatable {
             
             self.rootVC.miniPlayerView.alpha = 1.0
             self.rootVC.miniPlayerView.frame.origin.y = -self.rootVC.miniPlayerView.bounds.size.height
-            self.rootVC.tabBar.frame.origin.y = containerView.bounds.size.height
+            self.rootVC.tabBarController?.tabBar.frame.origin.y = containerView.bounds.size.height
         }
     }
     
@@ -83,11 +83,11 @@ final class MusicPlayerTransitionAnimation : TransitionAnimatable {
 
             self.modalVC.view.frame.origin.y = self.rootVC.miniPlayerView.frame.origin.y + self.rootVC.miniPlayerView.frame.size.height
             let tabY = tabStartOriginY + (tabDiff * percentComplete)
-            self.rootVC.tabBar.frame.origin.y = min(max(tabY, self.tabBarStartFrame.origin.y), tabEndOriginY)
+            self.rootVC.tabBarController?.tabBar.frame.origin.y = min(max(tabY, self.tabBarStartFrame.origin.y), tabEndOriginY)
             
             let alpha = 1.0 - (1.0 * percentComplete)
             self.rootVC.containerView.alpha = alpha + 0.5
-            self.rootVC.tabBar.alpha = alpha
+            self.rootVC.tabBarController?.tabBar.alpha = alpha
         } else {
             // miniPlayerView
             let startOriginY = 0 - self.rootVC.miniPlayerView.bounds.size.height
@@ -101,11 +101,11 @@ final class MusicPlayerTransitionAnimation : TransitionAnimatable {
             self.rootVC.miniPlayerView.frame.origin.y = startOriginY + (diff * percentComplete)
             self.modalVC.view.frame.origin.y = self.rootVC.miniPlayerView.frame.origin.y + self.rootVC.miniPlayerView.frame.size.height
             
-            self.rootVC.tabBar.frame.origin.y = tabStartOriginY - (tabDiff *  percentComplete)
+            self.rootVC.tabBarController?.tabBar.frame.origin.y = tabStartOriginY - (tabDiff *  percentComplete)
             
             let alpha = 1.0 * percentComplete
             self.rootVC.containerView.alpha = alpha + 0.5
-            self.rootVC.tabBar.alpha = alpha
+            self.rootVC.tabBarController?.tabBar.alpha = alpha
             self.rootVC.miniPlayerView.alpha = 1.0
         }
     }

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C224BE304A8DBA02274DEAC0BD95A5BF"
+               BlueprintIdentifier = "236B7357AA48EF3E0468F1CD11079CA3"
                BuildableName = "CreditCardForm.bundle"
                BlueprintName = "CreditCardForm-CreditCardForm"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C224BE304A8DBA02274DEAC0BD95A5BF"
+            BlueprintIdentifier = "236B7357AA48EF3E0468F1CD11079CA3"
             BuildableName = "CreditCardForm.bundle"
             BlueprintName = "CreditCardForm-CreditCardForm"
             ReferencedContainer = "container:Pods.xcodeproj">
