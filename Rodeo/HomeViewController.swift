@@ -25,6 +25,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tblSongs.contentInset = UIEdgeInsets.init(top: 0, left: 0, bottom: 50, right: 0)
         self.blurView = DynamicBlurView.init(frame: self.view.bounds)
         self.blurView.blurRadius = 5
         self.checkSubscription()

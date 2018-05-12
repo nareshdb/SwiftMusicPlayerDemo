@@ -20,22 +20,22 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         self.settings = [
-            Setting(name: "Profile", action: { 
+            Setting(name: "Profile", detail: "See you account details", action: {
                 
             }),
-            Setting(name: "Subscription", action: {
+            Setting(name: "Subscription", detail: "Your subscription details", action: {
                 
             }),
-            Setting(name: "Family Share", action: { 
+            Setting(name: "Family Share", detail: "Share your subcription with your family", action: {
                 
             }),
-            Setting(name: "Logout", action: { 
+            Setting(name: "Logout", detail: "", action: {
                 
             })
         ]
         self.tblSettings.reloadData()
+        self.tblSettings.tableFooterView = UIView()
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.settings.count
@@ -43,7 +43,10 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.selectionStyle = .none
+        cell.detailTextLabel?.text = self.settings[indexPath.row].detail
         cell.textLabel?.text = self.settings[indexPath.row].name
+        cell.imageView?.image = #imageLiteral(resourceName: "ic_FullnameSelectedIcon")
         return cell
     }
     
@@ -60,8 +63,9 @@ class Setting: NSObject {
     
     var name: String = ""
     var action: ()->() = {}
+    var detail: String = ""
     
-    convenience init(name: String, action: @escaping ()->()) {
+    convenience init(name: String, detail: String, action: @escaping ()->()) {
         self.init()
         self.action = action
         self.name = name
