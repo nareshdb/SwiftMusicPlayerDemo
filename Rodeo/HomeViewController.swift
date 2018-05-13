@@ -96,6 +96,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.present(MusicPlayerViewController.sharedPlayer, animated: true, completion: nil)
     }
     
+    @IBAction func btnFavAction(_ sender: Any) {
+        
+    }
+    
     @IBAction func btnSubscribedTapped(_ sender: UIButton) {
         playerView?.isHidden = true
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SubscriptionViewController") as! SubscriptionViewController

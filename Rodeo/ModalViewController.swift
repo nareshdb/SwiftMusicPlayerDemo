@@ -36,6 +36,30 @@ final class ModalViewController: UIViewController {
         self.indicatorView.startAnimating()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleStateChange(notification:)), name: NSNotification.Name.init("playerstate"), object: nil)
+        
+        switch MusicPlayerViewController.sharedPlayer.player.state {
+        case .buffering:
+            self.btnPlayPause.isHidden = true
+            self.indicatorView.isHidden = false
+        case .failed(let error):
+            self.view.makeToast(error.localizedDescription)
+        case .paused:
+            self.btnPlayPause.isHidden = false
+            self.indicatorView.isHidden = true
+            self.btnPlayPause.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        case .playing:
+            self.btnPlayPause.isHidden = false
+            self.indicatorView.isHidden = true
+            self.btnPlayPause.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        case .stopped:
+            self.btnPlayPause.isHidden = false
+            self.indicatorView.isHidden = true
+            self.btnPlayPause.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        case .waitingForConnection:
+            self.btnPlayPause.isHidden = true
+            self.indicatorView.isHidden = false
+            self.btnPlayPause.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        }
     }
     
     @IBAction func tapCloseButton() {
@@ -109,24 +133,29 @@ final class ModalViewController: UIViewController {
         case .buffering:
             self.btnPlayPause.isHidden = true
             self.indicatorView.isHidden = false
+            self.indicatorView.startAnimating()
         case .failed(let error):
             self.view.makeToast(error.localizedDescription)
         case .paused:
             self.btnPlayPause.isHidden = false
             self.indicatorView.isHidden = true
             self.btnPlayPause.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            self.indicatorView.stopAnimating()
         case .playing:
             self.btnPlayPause.isHidden = false
             self.indicatorView.isHidden = true
             self.btnPlayPause.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            self.indicatorView.stopAnimating()
         case .stopped:
             self.btnPlayPause.isHidden = false
             self.indicatorView.isHidden = true
             self.btnPlayPause.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            self.indicatorView.stopAnimating()
         case .waitingForConnection:
             self.btnPlayPause.isHidden = true
             self.indicatorView.isHidden = false
             self.btnPlayPause.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            self.indicatorView.startAnimating()
         }
     }
 }

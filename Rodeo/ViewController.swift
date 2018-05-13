@@ -8,6 +8,7 @@
 
 import UIKit
 import ARNTransitionAnimator
+import KDEAudioPlayer
 
 var playerView: LineView? = nil
 
@@ -33,6 +34,8 @@ final class ViewController: UIViewController {
         self.miniPlayerButton.setBackgroundImage(self.generateImageWithColor(color), for: .highlighted)
         playerView = miniPlayerView
         self.setupAnimator()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.handleStateChange(notification:)), name: NSNotification.Name.init("playerstate"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +85,38 @@ final class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         return image!
+    }
+    
+    func handleStateChange(notification: Notification) {
+        let object = notification.object as! (from: AudioPlayerState, state: AudioPlayerState)
+        switch object.state {
+        case .buffering:
+            self.miniPlayerView.btnPausePlay.isHidden = true
+            self.miniPlayerView.activityIndicator.isHidden = false
+            self.miniPlayerView.activityIndicator.startAnimating()
+        case .failed(let error):
+            self.view.makeToast(error.localizedDescription)
+        case .paused:
+            self.miniPlayerView.btnPausePlay.isHidden = false
+            self.miniPlayerView.activityIndicator.isHidden = true
+            self.miniPlayerView.btnPausePlay.setImage(#imageLiteral(resourceName: "play-button"), for: .normal)
+            self.miniPlayerView.activityIndicator.stopAnimating()
+        case .playing:
+            self.miniPlayerView.btnPausePlay.isHidden = false
+            self.miniPlayerView.activityIndicator.isHidden = true
+            self.miniPlayerView.btnPausePlay.setImage(#imageLiteral(resourceName: "pause-button"), for: .normal)
+            self.miniPlayerView.activityIndicator.stopAnimating()
+        case .stopped:
+            self.miniPlayerView.btnPausePlay.isHidden = false
+            self.miniPlayerView.activityIndicator.isHidden = true
+            self.miniPlayerView.btnPausePlay.setImage(#imageLiteral(resourceName: "play-button"), for: .normal)
+            self.miniPlayerView.activityIndicator.stopAnimating()
+        case .waitingForConnection:
+            self.miniPlayerView.btnPausePlay.isHidden = true
+            self.miniPlayerView.activityIndicator.isHidden = false
+            self.miniPlayerView.btnPausePlay.setImage(#imageLiteral(resourceName: "pause-button"), for: .normal)
+            self.miniPlayerView.activityIndicator.startAnimating()
+        }
     }
 }
 

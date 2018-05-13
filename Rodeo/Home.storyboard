@@ -25,7 +25,7 @@
                 <navigationController navigationBarHidden="YES" id="TPG-v5-i1Q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Music Store" image="ic_BuyGreyIcon" id="FBO-DQ-aNe"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1fy-du-ddJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1fy-du-ddJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -195,10 +195,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6d-UF-nqz">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sho-3D-9mJ">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sho-3D-9mJ">
                                                         <rect key="frame" x="15" y="15" width="345" height="33.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="✔️ Unlimited access to all songs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0y-He-Fzv">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ Unlimited access to all songs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0y-He-Fzv">
                                                                 <rect key="frame" x="0.0" y="5" width="330" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -213,10 +213,10 @@
                                                             <constraint firstItem="W0y-He-Fzv" firstAttribute="top" secondItem="Sho-3D-9mJ" secondAttribute="top" constant="5" id="wxe-e2-fGD"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hLj-ng-dtM">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLj-ng-dtM">
                                                         <rect key="frame" x="15" y="48.5" width="345" height="33.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="✔️ High Quality Audio streaming." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW7-Fz-BRK">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ High Quality Audio streaming." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW7-Fz-BRK">
                                                                 <rect key="frame" x="0.0" y="5" width="330" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -231,10 +231,10 @@
                                                             <constraint firstAttribute="bottom" secondItem="AW7-Fz-BRK" secondAttribute="bottom" constant="5" id="vkj-RV-El5"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPU-ew-z2F">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPU-ew-z2F">
                                                         <rect key="frame" x="15" y="82" width="345" height="33.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="✔️ Share your subscription with 4 of your family members." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-GW-zY0">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ Share your subscription with 4 of your family members." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-GW-zY0">
                                                                 <rect key="frame" x="0.0" y="5" width="330" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -249,10 +249,10 @@
                                                             <constraint firstAttribute="trailing" secondItem="ZcU-GW-zY0" secondAttribute="trailing" constant="15" id="pYF-XZ-T3N"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bv-Oo-DbQ">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bv-Oo-DbQ">
                                                         <rect key="frame" x="15" y="115.5" width="345" height="33.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="✔️ Keep your favorite songs in seperate playlist." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRm-lF-NjS">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✔️ Keep your favorite songs in seperate playlist." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRm-lF-NjS">
                                                                 <rect key="frame" x="0.0" y="5" width="330" height="23.5"/>
                                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -596,7 +596,7 @@
                     <tabBarItem key="tabBarItem" title="Home" image="ic_HomeUnSelectedIcon" id="z2j-6M-QRe"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="65s-Zs-wNJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="65s-Zs-wNJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -637,12 +637,22 @@
                                             <constraint firstAttribute="width" constant="40" id="sjl-2y-UVh"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDx-fW-0eO">
+                                        <rect key="frame" x="328" y="26" width="32" height="32"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" image="unfav"/>
+                                        <connections>
+                                            <action selector="btnFavAction:" destination="bIs-hl-6q3" eventType="touchUpInside" id="aEV-z0-uWC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="9CS-0A-gLw"/>
                                     <constraint firstAttribute="bottom" secondItem="HlF-cH-sjA" secondAttribute="bottom" constant="5" id="EEw-V6-nyV"/>
                                     <constraint firstItem="ERb-so-hy4" firstAttribute="top" secondItem="iep-Ib-93t" secondAttribute="top" constant="20" id="FZA-M0-ysG"/>
+                                    <constraint firstAttribute="trailing" secondItem="PDx-fW-0eO" secondAttribute="trailing" constant="15" id="IrC-fx-AAI"/>
+                                    <constraint firstItem="PDx-fW-0eO" firstAttribute="centerY" secondItem="iep-Ib-93t" secondAttribute="centerY" constant="10" id="Qwo-Fn-7RF"/>
                                     <constraint firstAttribute="trailing" secondItem="HlF-cH-sjA" secondAttribute="trailing" constant="10" id="UQK-7E-4so"/>
                                     <constraint firstItem="ERb-so-hy4" firstAttribute="centerX" secondItem="iep-Ib-93t" secondAttribute="centerX" id="gOb-8V-M4z"/>
                                 </constraints>
@@ -787,7 +797,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="ic_SettingsWhiteIcon" id="gOz-f1-Upx"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bTd-N5-UxV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bTd-N5-UxV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1139,7 +1149,20 @@
                                             <constraint firstAttribute="width" constant="35" id="ba2-gi-tgV"/>
                                         </constraints>
                                         <state key="normal" image="play-button"/>
+                                        <connections>
+                                            <action selector="btnplaypauseAction:" destination="c20-CT-lUL" eventType="touchUpInside" id="paY-0P-9UI"/>
+                                        </connections>
                                     </button>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUc-5Q-wi7" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="330" y="10" width="35" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="lineScale"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.92220510560000002" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1149,19 +1172,24 @@
                                     <constraint firstItem="Xwx-ak-06M" firstAttribute="leading" secondItem="c20-CT-lUL" secondAttribute="leading" id="Ig1-vr-4Mw"/>
                                     <constraint firstItem="Xwx-ak-06M" firstAttribute="top" secondItem="c20-CT-lUL" secondAttribute="top" id="JJn-a2-Dfl"/>
                                     <constraint firstItem="Rhu-Pc-Ewm" firstAttribute="trailing" secondItem="Xwx-ak-06M" secondAttribute="trailing" constant="-10" id="MAy-GI-xeD"/>
+                                    <constraint firstItem="UUc-5Q-wi7" firstAttribute="trailing" secondItem="Rhu-Pc-Ewm" secondAttribute="trailing" id="MNX-fD-Svg"/>
                                     <constraint firstItem="Rhu-Pc-Ewm" firstAttribute="centerY" secondItem="Xwx-ak-06M" secondAttribute="centerY" id="PO7-bq-7Xb"/>
                                     <constraint firstAttribute="trailing" secondItem="Xwx-ak-06M" secondAttribute="trailing" id="XDV-AO-9Vn"/>
                                     <constraint firstAttribute="height" constant="55" id="amY-et-0Uk"/>
                                     <constraint firstAttribute="bottom" secondItem="irs-x4-bkN" secondAttribute="bottom" id="c4d-LI-kb4"/>
                                     <constraint firstItem="B1k-rh-COs" firstAttribute="top" secondItem="c20-CT-lUL" secondAttribute="top" id="cS3-Y2-5u1"/>
                                     <constraint firstItem="B1k-rh-COs" firstAttribute="centerY" secondItem="QH5-db-73y" secondAttribute="centerY" id="dy3-9D-0yP"/>
+                                    <constraint firstItem="UUc-5Q-wi7" firstAttribute="leading" secondItem="Rhu-Pc-Ewm" secondAttribute="leading" id="nTo-tl-eDo"/>
                                     <constraint firstItem="QH5-db-73y" firstAttribute="centerY" secondItem="c20-CT-lUL" secondAttribute="centerY" id="nqZ-AM-nNk"/>
                                     <constraint firstItem="irs-x4-bkN" firstAttribute="leading" secondItem="c20-CT-lUL" secondAttribute="leading" id="qkx-tO-4hy"/>
+                                    <constraint firstItem="UUc-5Q-wi7" firstAttribute="bottom" secondItem="Rhu-Pc-Ewm" secondAttribute="bottom" id="tjh-NE-gQq"/>
+                                    <constraint firstItem="UUc-5Q-wi7" firstAttribute="top" secondItem="Rhu-Pc-Ewm" secondAttribute="top" id="ue5-nz-PtD"/>
                                     <constraint firstAttribute="trailing" secondItem="irs-x4-bkN" secondAttribute="trailing" id="wPY-iV-k3B"/>
                                     <constraint firstItem="QH5-db-73y" firstAttribute="leading" secondItem="c20-CT-lUL" secondAttribute="leading" constant="10" id="yfg-Ye-anJ"/>
                                     <constraint firstItem="irs-x4-bkN" firstAttribute="top" secondItem="c20-CT-lUL" secondAttribute="top" id="ygt-lb-caI"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="UUc-5Q-wi7" id="cnK-ms-HQp"/>
                                     <outlet property="btnPausePlay" destination="Rhu-Pc-Ewm" id="OG3-cM-gNc"/>
                                     <outlet property="imgCover" destination="QH5-db-73y" id="LiJ-ca-saf"/>
                                     <outlet property="lblSongTitle" destination="B1k-rh-COs" id="qev-So-UgL"/>
@@ -1369,7 +1397,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="wFi-t4-bhQ" sceneMemberID="viewController">
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KO3-Oe-4BP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KO3-Oe-4BP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1513,5 +1541,6 @@
         <image name="replay_unselected" width="64" height="64"/>
         <image name="shuffle_selected" width="79" height="79"/>
         <image name="shuffle_unselected" width="79" height="79"/>
+        <image name="unfav" width="32" height="32"/>
     </resources>
 </document>
