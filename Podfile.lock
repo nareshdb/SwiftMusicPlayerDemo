@@ -52,6 +52,7 @@ PODS:
   - NVActivityIndicatorView (4.1.1):
     - NVActivityIndicatorView/Presenter (= 4.1.1)
   - NVActivityIndicatorView/Presenter (4.1.1)
+  - RangeSeekSlider (1.7.0)
   - Stripe (9.3.0)
   - SwiftyJSON (4.0.0)
   - Toast-Swift (3.0.1)
@@ -67,6 +68,7 @@ DEPENDENCIES:
   - KDEAudioPlayer
   - Kingfisher
   - NVActivityIndicatorView
+  - RangeSeekSlider
   - Stripe (= 9.3.0)
   - SwiftyJSON
   - Toast-Swift
@@ -91,6 +93,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - NVActivityIndicatorView
+    - RangeSeekSlider
     - Stripe
     - SwiftyJSON
     - Toast-Swift
@@ -114,10 +117,11 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   NVActivityIndicatorView: 60109b9bf46efc2e71ab81453196ccdfdfeea870
+  RangeSeekSlider: 0386c5a9aa5ebcb2fa5238e8a627280cf46c7c0a
   Stripe: 0f41a33a6fa3ac76ee668d7df3e2680c28b8ab1a
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: c741c911632e6f924b1ab81dd9fcfc9fc5c1edeb
+PODFILE CHECKSUM: 0aaf4c04c8ead201afa5aabf6d230bc6ff8601c5
 
 COCOAPODS: 1.5.0

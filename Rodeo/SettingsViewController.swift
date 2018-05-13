@@ -20,16 +20,16 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         self.settings = [
-            Setting(name: "Profile", detail: "See you account details", action: {
+            Setting(name: "Profile", detail: "See you account details", icon: #imageLiteral(resourceName: "user"), action: {
                 
             }),
-            Setting(name: "Subscription", detail: "Your subscription details", action: {
+            Setting(name: "Subscription", detail: "Your subscription details", icon: #imageLiteral(resourceName: "subscribe-rss-button"), action: {
                 
             }),
-            Setting(name: "Family Share", detail: "Share your subcription with your family", action: {
+            Setting(name: "Family Share", detail: "Share your subcription with your family", icon: #imageLiteral(resourceName: "family-silhouette"), action: {
                 
             }),
-            Setting(name: "Logout", detail: "", action: {
+            Setting(name: "Logout", detail: "", icon: #imageLiteral(resourceName: "frown"), action: {
                 
             })
         ]
@@ -45,8 +45,9 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         cell.selectionStyle = .none
         cell.detailTextLabel?.text = self.settings[indexPath.row].detail
+        
         cell.textLabel?.text = self.settings[indexPath.row].name
-        cell.imageView?.image = #imageLiteral(resourceName: "ic_FullnameSelectedIcon")
+        cell.imageView?.image = self.settings[indexPath.row].icon
         return cell
     }
     
@@ -64,10 +65,13 @@ class Setting: NSObject {
     var name: String = ""
     var action: ()->() = {}
     var detail: String = ""
+    var icon: UIImage!
     
-    convenience init(name: String, detail: String, action: @escaping ()->()) {
+    convenience init(name: String, detail: String, icon: UIImage, action: @escaping ()->()) {
         self.init()
         self.action = action
         self.name = name
+        self.icon = icon
+        self.detail = detail
     }
 }

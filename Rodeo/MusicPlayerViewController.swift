@@ -35,6 +35,7 @@ class MusicPlayerViewController: UIViewController {
                 self.player.stop()
                 let item = AudioItem.init(highQualitySoundURL: nil, mediumQualitySoundURL: self.currentMusicItem?.songURL!, lowQualitySoundURL: nil)
                 self.player.play(item: item!)
+                self.player.delegate = self
                 playerView?.imgCover.kf.setImage(with: self.currentMusicItem?.coverImage)
                 playerView?.lblSongTitle.text = self.currentMusicItem?.name
             }
@@ -74,21 +75,51 @@ class MusicPlayerViewController: UIViewController {
         self.pauseButton.isHidden = false
     }
     
-    @IBAction func pauseButtonTapped(_ sender: UIButton) {
+    func prev() {
+        self.ipv.restartWithProgress(duration: 10)
+        if
+            let item = self.currentMusicItem,
+            let i = self.playList?.index(of: item),
+            item != self.playList?.first
+        {
+            self.currentMusicItem = self.playList?[i-1]
+        }
+        else {
+            self.currentMusicItem = self.playList?.last
+        }
+    }
+    
+    func next() {
+        self.ipv.restartWithProgress(duration: 50)
+        if
+            let item = self.currentMusicItem,
+            let i = self.playList?.index(of: item),
+            item != self.playList?.last
+        {
+            self.currentMusicItem = self.playList?[i+1]
+        }
+        else {
+            self.currentMusicItem = self.playList?.first
+        }
+    }
+    
+    func playPause() {
         self.ipv.stop()
         self.player.pause()
         self.playButton.isHidden = false
         self.pauseButton.isHidden = true
     }
     
+    @IBAction func pauseButtonTapped(_ sender: UIButton) {
+        self.playPause()
+    }
+    
     @IBAction func nextTapped(sender: AnyObject) {
-        self.ipv.restartWithProgress(duration: 50)
-        self.player.next()
+        self.next()
     }
     
     @IBAction func previousTapped(sender: AnyObject) {
-        self.ipv.restartWithProgress(duration: 10)
-        self.player.previous()
+        self.prev()
     }
     
     @IBAction func btnDismiss(sender: AnyObject) {
@@ -136,7 +167,35 @@ extension MusicPlayerViewController: InteractivePlayerViewDelegate {
 extension MusicPlayerViewController: AudioPlayerDelegate {
     
     func audioPlayer(_ audioPlayer: AudioPlayer, willStartPlaying item: AudioItem) {
+        
     }
     
+    func audioPlayer(_ audioPlayer: AudioPlayer, didChangeStateFrom from: AudioPlayerState, to state: AudioPlayerState) {
+        NotificationCenter.default.post(name: NSNotification.Name.init("playerstate"), object: (from: from, to: state))
+    }
+    
+    func audioPlayer(_ audioPlayer: AudioPlayer, didLoad range: TimeRange, for item: AudioItem) {
+        print("--- didload range for item ----")
+        print(range, item)
+        print("--- didload range for item ----")
+    }
+    
+    func audioPlayer(_ audioPlayer: AudioPlayer, didFindDuration duration: TimeInterval, for item: AudioItem) {
+        print("--- didfind duration for item ----")
+        print(duration, item)
+        print("--- didfind duration for item ----")
+    }
+    
+    func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateProgressionTo time: TimeInterval, percentageRead: Float) {
+        print("--- didupdate progression to time for item ----")
+        print(time, percentageRead)
+        print("--- didupdate progression to time for item ----")
+    }
+    
+    func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateEmptyMetadataOn item: AudioItem, withData data: Metadata) {
+        print("--- didupdate metdata on item ----")
+        print(item, data)
+        print("--- didupdate metadata on item ----")
+    }
 }
 

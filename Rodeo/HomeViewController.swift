@@ -67,6 +67,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let music = Music(snapshot: snap)
             self.songs.append(music)
             self.tblSongs.reloadData()
+            MusicPlayerViewController.sharedPlayer.playList = self.songs
         })
         
     }

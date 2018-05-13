@@ -8,6 +8,7 @@ target 'Rodeo' do
   # Pods for Rodeo
 #  pod 'PandoraPlayer', :git => 'https://github.com/nareshdb/PandoraPlayer.git', :commit => '780f32c8ed02305b968025c18d780036605b74a0'
 #  pod 'MFCard', '1.1'  
+  pod 'RangeSeekSlider'
   pod 'Stripe', '9.3.0'
   pod "CreditCardForm", '0.1.0'
   pod 'KDEAudioPlayer'
