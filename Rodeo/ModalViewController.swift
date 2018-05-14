@@ -34,8 +34,13 @@ final class ModalViewController: UIViewController {
         self.view.addSubview(blurView)
         self.view.sendSubview(toBack: blurView)
         self.indicatorView.startAnimating()
+        self.timeSlider.delegate = self
+        self.timeSlider.rightHandle.isHidden = true
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.handleStateChange(notification:)), name: NSNotification.Name.init("playerstate"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.timeCheck(notification:)), name: NSNotification.Name.init("time"), object: nil)
+        
         
         switch MusicPlayerViewController.sharedPlayer.player.state {
         case .buffering:
@@ -127,9 +132,13 @@ final class ModalViewController: UIViewController {
         }
     }
     
+    func timeCheck(notification: Notification) {
+        
+    }
+    
     func handleStateChange(notification: Notification) {
-        let object = notification.object as! (from: AudioPlayerState, state: AudioPlayerState)
-        switch object.state {
+        let object = notification.object as! (from: AudioPlayerState, to: AudioPlayerState)
+        switch object.to {
         case .buffering:
             self.btnPlayPause.isHidden = true
             self.indicatorView.isHidden = false
@@ -158,4 +167,36 @@ final class ModalViewController: UIViewController {
             self.indicatorView.startAnimating()
         }
     }
+}
+
+extension ModalViewController: RangeSeekSliderDelegate {
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, didChange minValue: CGFloat, maxValue: CGFloat) {
+        
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMaxValue maxValue: CGFloat) -> String? {
+        
+        if let seconds = MusicPlayerViewController.sharedPlayer.player.currentItemDuration {
+            let time = secondsToHoursMinutesSeconds(seconds: Int(seconds))
+            let hour = time.0 > 0 ? time.0.description + ":" : ""
+            let minutes = time.1
+            let seconds = ":" + time.2.description
+            return hour + minutes.description + seconds.description
+        }
+        else {
+            return "00:00"
+        }
+    }
+    
+    func rangeSeekSlider(_ slider: RangeSeekSlider, stringForMinValue minValue: CGFloat) -> String? {
+        return ""
+    }
+    
+    
+}
+
+
+func secondsToHoursMinutesSeconds (seconds : Int) -> (Int, Int, Int) {
+    return (seconds / 3600, (seconds % 3600) / 60, (seconds % 3600) % 60)
 }

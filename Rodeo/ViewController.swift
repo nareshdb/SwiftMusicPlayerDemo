@@ -88,8 +88,8 @@ final class ViewController: UIViewController {
     }
     
     func handleStateChange(notification: Notification) {
-        let object = notification.object as! (from: AudioPlayerState, state: AudioPlayerState)
-        switch object.state {
+        let object = notification.object as! (from: AudioPlayerState, to: AudioPlayerState)
+        switch object.to {
         case .buffering:
             self.miniPlayerView.btnPausePlay.isHidden = true
             self.miniPlayerView.activityIndicator.isHidden = false

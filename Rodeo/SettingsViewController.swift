@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 
+
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tblSettings: UITableView!
@@ -20,7 +21,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         self.settings = [
-            Setting(name: "Profile", detail: "See you account details", icon: #imageLiteral(resourceName: "user"), action: {
+           /* Setting(name: "Profile", detail: "See you account details", icon: #imageLiteral(resourceName: "user"), action: {
                 
             }),
             Setting(name: "Subscription", detail: "Your subscription details", icon: #imageLiteral(resourceName: "subscribe-rss-button"), action: {
@@ -28,8 +29,25 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             }),
             Setting(name: "Family Share", detail: "Share your subcription with your family", icon: #imageLiteral(resourceName: "family-silhouette"), action: {
                 
-            }),
+            }),*/
             Setting(name: "Logout", detail: "", icon: #imageLiteral(resourceName: "frown"), action: {
+                MusicPlayerViewController.sharedPlayer.player.stop()
+                do {
+                    try Auth.auth().signOut()
+                    if let vc = self.navigationController?.viewControllers.first(where: {$0 is SignInViewController}) {
+                        self.navigationController?.popToViewController(vc, animated: true)
+                        
+                    }
+                    else {
+                        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+                        self.navigationController?.pushViewController(loginVC, animated: true)
+                    }
+                }
+                catch _ {
+                    
+                    let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+                    self.navigationController?.pushViewController(loginVC, animated: true)
+                }
                 
             })
         ]

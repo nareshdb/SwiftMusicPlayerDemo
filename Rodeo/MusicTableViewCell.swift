@@ -13,18 +13,21 @@ class MusicTableViewCell: UITableViewCell {
     @IBOutlet weak var imgLabel: UIImageView!
     @IBOutlet weak var lblSongName: UILabel!
     @IBOutlet weak var lblArtistName: UILabel!
+    @IBOutlet weak var btnFav: UIButton!
     
+    var delegate: MusicCellDelegate?
     
+    @IBAction func btnFavAction(_ sender: Any) {
+        self.delegate?.didSelectFav(cell: self)
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+}
 
-        // Configure the view for the selected state
-    }
-
+protocol MusicCellDelegate: NSObjectProtocol {
+    func didSelectFav(cell: MusicTableViewCell)
 }

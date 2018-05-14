@@ -376,7 +376,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yga-QK-Kzk">
-                                                <rect key="frame" x="152.5" y="20" width="71" height="44"/>
+                                                <rect key="frame" x="152" y="20" width="71" height="44"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="m9D-ZC-juY"/>
                                                 </constraints>
@@ -639,6 +639,10 @@
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDx-fW-0eO">
                                         <rect key="frame" x="328" y="26" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="5hc-1h-YBs"/>
+                                            <constraint firstAttribute="width" constant="32" id="Xfy-ym-WLU"/>
+                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                         <state key="normal" image="unfav"/>
                                         <connections>
@@ -690,16 +694,30 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9w-H2-BCl">
+                                                            <rect key="frame" x="325" y="0.0" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="6G5-Tg-oeZ"/>
+                                                                <constraint firstAttribute="width" constant="30" id="gO4-W1-Ads"/>
+                                                            </constraints>
+                                                            <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                                            <state key="normal" title="Button" image="unfav"/>
+                                                            <connections>
+                                                                <action selector="btnFavAction:" destination="oqT-7O-k30" eventType="touchUpInside" id="b2a-Ee-leP"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="AMi-SX-xuI" firstAttribute="leading" secondItem="AVA-aY-BVN" secondAttribute="leading" id="1He-sU-0r7"/>
                                                         <constraint firstAttribute="trailing" secondItem="AMi-SX-xuI" secondAttribute="trailing" id="1Ma-QW-HAV"/>
+                                                        <constraint firstItem="X9w-H2-BCl" firstAttribute="top" secondItem="w1H-bs-caC" secondAttribute="top" id="4lT-ik-gNW"/>
                                                         <constraint firstAttribute="bottom" secondItem="kfk-L7-Gaf" secondAttribute="bottom" id="5Dt-Xx-jBi"/>
                                                         <constraint firstItem="AVA-aY-BVN" firstAttribute="leading" secondItem="kfk-L7-Gaf" secondAttribute="trailing" constant="8" id="EIz-cT-j6b"/>
                                                         <constraint firstItem="kfk-L7-Gaf" firstAttribute="top" secondItem="w1H-bs-caC" secondAttribute="top" id="HeD-bq-c0R"/>
                                                         <constraint firstItem="AMi-SX-xuI" firstAttribute="top" secondItem="AVA-aY-BVN" secondAttribute="bottom" id="IEO-y1-8L2"/>
                                                         <constraint firstItem="kfk-L7-Gaf" firstAttribute="leading" secondItem="w1H-bs-caC" secondAttribute="leading" id="QV4-fg-VcZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="X9w-H2-BCl" secondAttribute="trailing" id="TKt-dU-CbN"/>
                                                         <constraint firstItem="AVA-aY-BVN" firstAttribute="centerY" secondItem="w1H-bs-caC" secondAttribute="centerY" constant="-10" id="qHm-og-YUT"/>
                                                         <constraint firstAttribute="trailing" secondItem="AVA-aY-BVN" secondAttribute="trailing" id="vLe-3I-9Vk"/>
                                                     </constraints>
@@ -713,6 +731,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnFav" destination="X9w-H2-BCl" id="CWI-97-czh"/>
                                             <outlet property="imgLabel" destination="kfk-L7-Gaf" id="ESq-hx-2iq"/>
                                             <outlet property="lblArtistName" destination="AMi-SX-xuI" id="OsB-rP-72G"/>
                                             <outlet property="lblSongName" destination="AVA-aY-BVN" id="P5n-PB-iIw"/>
@@ -781,6 +800,7 @@
                     <navigationItem key="navigationItem" id="UbB-Aj-F5L"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="btnFav" destination="PDx-fW-0eO" id="DXC-14-oho"/>
                         <outlet property="isSubscribedView" destination="ntt-1a-flT" id="3XA-Ji-cTU"/>
                         <outlet property="musicView" destination="HlF-cH-sjA" id="h9y-Q6-M9u"/>
                         <outlet property="tblSongs" destination="MSu-Q1-bHd" id="jyi-gy-17E"/>
@@ -1123,7 +1143,7 @@
                                         </view>
                                         <blurEffect style="extraLight"/>
                                     </visualEffectView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music-player" translatesAutoresizingMaskIntoConstraints="NO" id="QH5-db-73y">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music-player" translatesAutoresizingMaskIntoConstraints="NO" id="QH5-db-73y">
                                         <rect key="frame" x="10" y="5" width="45" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="B6V-bW-xmx"/>
@@ -1310,7 +1330,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joJ-8M-DTP" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="67" y="236" width="240" height="128"/>
+                                <rect key="frame" x="162.5" y="520" width="50" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="lineScale"/>

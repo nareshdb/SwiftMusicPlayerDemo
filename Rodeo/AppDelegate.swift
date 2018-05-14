@@ -11,6 +11,7 @@ import FirebaseAuth
 import Firebase
 import NVActivityIndicatorView
 import IQKeyboardManagerSwift
+import Toast_Swift
 
 var appInstance: AppDelegate!
 
@@ -31,6 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = UIStoryboard.init(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeNVC")
         }
         
+        ToastManager.shared.position = .top
         
         return true
     }

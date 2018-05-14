@@ -41,7 +41,8 @@ class SubscriptionViewController: UIViewController {
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
         vc.price = self.selectedPlan == 0 ? "₹ 39.99" : "₹ 199.99"
-        vc.finalDate = Double(self.selectedPlan == 0 ? 60 * 60 * 24 * 30 : 60 * 60 * 24 * 30 * 12)
+        let date = self.selectedPlan == 0 ? 60 * 60 * 24 * 30 : 60 * 60 * 24 * 30 * 12
+        vc.finalDate = Double(date)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

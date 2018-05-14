@@ -47,15 +47,6 @@ class MusicPlayerViewController: UIViewController {
             if self.playList == nil {
                 return
             }
-            for p in self.playList! {
-                if self.currentMusicItem == nil {
-                    self.currentMusicItem = p
-                    self.player.add(item: AudioItem(highQualitySoundURL: nil, mediumQualitySoundURL: p.songURL!, lowQualitySoundURL: nil)!)
-                }
-                else {
-                    self.player.add(item: AudioItem(highQualitySoundURL: nil, mediumQualitySoundURL: p.songURL!, lowQualitySoundURL: nil)!)
-                }
-            }
         }
     }
     
@@ -178,18 +169,21 @@ extension MusicPlayerViewController: AudioPlayerDelegate {
         print("--- didload range for item ----")
         print(range, item)
         print("--- didload range for item ----")
+        NotificationCenter.default.post(name: NSNotification.Name.init("time"), object: nil)
     }
     
     func audioPlayer(_ audioPlayer: AudioPlayer, didFindDuration duration: TimeInterval, for item: AudioItem) {
         print("--- didfind duration for item ----")
         print(duration, item)
         print("--- didfind duration for item ----")
+        NotificationCenter.default.post(name: NSNotification.Name.init("time"), object: nil)
     }
     
     func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateProgressionTo time: TimeInterval, percentageRead: Float) {
         print("--- didupdate progression to time for item ----")
         print(time, percentageRead)
         print("--- didupdate progression to time for item ----")
+        NotificationCenter.default.post(name: NSNotification.Name.init("time"), object: nil)
     }
     
     func audioPlayer(_ audioPlayer: AudioPlayer, didUpdateEmptyMetadataOn item: AudioItem, withData data: Metadata) {
