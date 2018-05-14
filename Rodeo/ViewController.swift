@@ -68,6 +68,9 @@ final class ViewController: UIViewController {
     }
     
     @IBAction func tapMiniPlayerButton() {
+        if MusicPlayerViewController.sharedPlayer.currentMusicItem == nil {
+            return
+        }
         self.modalVC.dismiss(animated: false, completion: nil)
         self.present(self.modalVC, animated: true, completion: nil)
     }

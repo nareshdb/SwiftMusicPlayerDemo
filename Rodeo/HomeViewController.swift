@@ -51,6 +51,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.checkSubscription), name: NSNotification.Name.init("subscribed"), object: nil)
         
+        
         ToastManager.shared.position = .top
     }
     
@@ -111,6 +112,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        playerView?.activityIndicator.startAnimating()
+        playerView?.activityIndicator.isHidden = false
+        playerView?.btnPausePlay.isHidden = true
         MusicPlayerViewController.sharedPlayer.currentMusicItem = self.finalSongs[indexPath.row]
         MusicPlayerViewController.sharedPlayer.playList = self.finalSongs
     }

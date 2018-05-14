@@ -31,24 +31,30 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             }),*/
             Setting(name: "Logout", detail: "", icon: #imageLiteral(resourceName: "frown"), action: {
-                MusicPlayerViewController.sharedPlayer.player.stop()
-                do {
-                    try Auth.auth().signOut()
-                    if let vc = self.navigationController?.viewControllers.first(where: {$0 is SignInViewController}) {
-                        self.navigationController?.popToViewController(vc, animated: true)
-                        
+                let alert = UIAlertController.init(title: "Confirm", message: "Are you sure you want to Logout?", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction.init(title: "Yes", style: UIAlertActionStyle.default, handler: { (test) in
+                    MusicPlayerViewController.sharedPlayer.player.stop()
+                    do {
+                        try Auth.auth().signOut()
+                        if let vc = self.navigationController?.viewControllers.first(where: {$0 is SignInViewController}) {
+                            _ = self.navigationController?.popToViewController(vc, animated: true)
+                            
+                        }
+                        else {
+                            let loginVC = UIStoryboard.init(name: "Authentication", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+                            self.navigationController?.pushViewController(loginVC, animated: true)
+                        }
                     }
-                    else {
-                        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
+                    catch _ {
+                        
+                        let loginVC = UIStoryboard.init(name: "Authentication", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
                         self.navigationController?.pushViewController(loginVC, animated: true)
                     }
-                }
-                catch _ {
-                    
-                    let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as! SignInViewController
-                    self.navigationController?.pushViewController(loginVC, animated: true)
-                }
+                }))
                 
+                alert.addAction(UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+                
+                self.present(alert, animated: true, completion: nil)
             })
         ]
         self.tblSettings.reloadData()
