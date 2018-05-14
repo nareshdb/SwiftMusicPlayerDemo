@@ -74,7 +74,9 @@ class SignInViewController: UIViewController
                         user?.sendEmailVerification(completion: nil)
                         return
                     }
+                    
                     appInstance.window!.makeToast("Login Successfull")
+                    favSongs = [:]
                     let vc = UIStoryboard(name: "Home", bundle: Bundle.main).instantiateViewController(withIdentifier: "HomeNVC")
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
