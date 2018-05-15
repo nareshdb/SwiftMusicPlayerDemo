@@ -57,6 +57,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="music-player" width="256" height="256"/>
+        <image name="music-player" width="60" height="60"/>
     </resources>
 </document>
